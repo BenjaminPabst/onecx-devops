@@ -85,3 +85,7 @@ module "onecx-bookmark" {
 module "onecx-local" {
   source = "./products/onecx-local"
 }
+
+module "onecx-test" {
+  source = "./products/onecx-test"
+}
