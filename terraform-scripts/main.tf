@@ -114,6 +114,6 @@ module "onecx-notification" {
   source = "./products/onecx-notification"
 }
 
-module "onecx-ai" {
-  source = "./products/onecx-ai"
+module "onecx-ai-agents" {
+  source = "./products/onecx-ai-agents"
 }
