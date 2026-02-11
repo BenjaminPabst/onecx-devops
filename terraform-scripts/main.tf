@@ -109,3 +109,7 @@ module "onecx-chat" {
 module "onecx-service" {
   source = "./products/onecx-service"
 }
+
+module "onecx-notification" {
+  source = "./products/onecx-notification"
+}
