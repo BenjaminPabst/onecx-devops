@@ -113,3 +113,7 @@ module "onecx-service" {
 module "onecx-notification" {
   source = "./products/onecx-notification"
 }
+
+module "onecx-ai" {
+  source = "./products/onecx-ai"
+}
