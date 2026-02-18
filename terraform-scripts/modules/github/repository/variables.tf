@@ -39,3 +39,27 @@ variable "project_repo" {
   type = bool
   default = false
 }
+
+variable "archived" {
+  description = "Specifies if the repository should be archived. Defaults to false. NOTE Currently, the API does not support unarchiving."
+  type = bool
+  default = false
+}
+
+variable "auto_merge" {
+  description = "Set to true to allow auto-merging pull requests on the repository."
+  type = bool
+  default = false
+}
+
+variable "homepage_url" {
+  description = "URL of a page describing the project"
+  type        = string
+  default     = null
+}
+
+variable "topics" {
+  description = "List of topics of the repository"
+  type        = list(string)
+  default     = []
+}

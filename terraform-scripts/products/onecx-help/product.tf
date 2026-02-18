@@ -3,7 +3,7 @@
 module "onecx-help-team" {
   source = "../../modules/github/team"
   team_name        = "onecx-help"
-  team_description = "OneCx help services team"
+  team_description = "OneCX Help services team"
   team_members_file_path   = "products/onecx-help/team.csv"
 }
 
@@ -11,7 +11,9 @@ module "onecx-help-team" {
 module "onecx-help" {
   source = "../../modules/product"
   repository_name        = "onecx-help"
-  repository_description = "OneCx help"
+  repository_description = "OneCX Help"
+  homepage_url           = "https://onecx.github.io/docs/onecx-help/current/general"
+  topics                 = ["product", "help"]
   team_id                = module.onecx-help-team.team_id
   team_name              = module.onecx-help-team.team_name
 }
@@ -20,7 +22,9 @@ module "onecx-help" {
 module "onecx-help-svc" {
   source = "../../modules/quarkus"
   repository_name        = "onecx-help-svc"
-  repository_description = "OneCX Help Management SVC"
+  repository_description = "OneCX Help Backend Service"
+  homepage_url           = "https://onecx.github.io/docs/onecx-help/current/onecx-help-svc"
+  topics                 = ["java", "quarkus", "svc", "help"]
   team_id                = module.onecx-help-team.team_id
 }
 
@@ -28,7 +32,9 @@ module "onecx-help-svc" {
 module "onecx-help-bff" {
   source = "../../modules/quarkus"
   repository_name        = "onecx-help-bff"
-  repository_description = "OneCX Help Management BFF"
+  repository_description = "OneCX Help Backend-For-Frontend"
+  homepage_url           = "https://onecx.github.io/docs/onecx-help/current/onecx-help-bff"
+  topics                 = ["java", "quarkus", "bff", "help"]
   team_id                = module.onecx-help-team.team_id
 }
 
@@ -36,6 +42,8 @@ module "onecx-help-bff" {
 module "onecx-help-ui" {
   source = "../../modules/angular"
   repository_name        = "onecx-help-ui"
-  repository_description = "OneCX Help Management UI"
+  repository_description = "OneCX Help UI"
+  homepage_url           = "https://onecx.github.io/docs/onecx-help/current/onecx-help-ui"
+  topics                 = ["angular", "ui", "help"]
   team_id                = module.onecx-help-team.team_id
 }

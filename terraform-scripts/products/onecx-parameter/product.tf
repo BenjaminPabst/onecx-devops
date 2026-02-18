@@ -11,21 +11,20 @@ module "onecx-parameter-team" {
 module "onecx-parameter" {
   source = "../../modules/product"
   repository_name        = "onecx-parameter"
-  repository_description = "OneCx Parameter Management"
+  repository_description = "OneCX Parameter"
+  homepage_url           = "https://onecx.github.io/docs/onecx-parameter/current/general"
+  topics                 = ["product", "parameter"]
   team_id                = module.onecx-parameter-team.team_id
   team_name              = module.onecx-parameter-team.team_name
-  labels = {
-    onecx-parameter-svc = "0ea5e9"
-    onecx-parameter-bff = "14b8a6"
-    onecx-parameter-ui  = "6366f1"
-  }  
 }
 
 # ONECX-PARAMETER-SVC
 module "onecx-parameter-svc" {
   source = "../../modules/quarkus"
   repository_name        = "onecx-parameter-svc"
-  repository_description = "OneCx Parameter Management Service"
+  repository_description = "OneCX Parameter Backend Service"
+  homepage_url           = "https://onecx.github.io/docs/onecx-parameter/current/onecx-parameter-svc"
+  topics                 = ["java", "quarkus", "svc", "parameter"]
   team_id                = module.onecx-parameter-team.team_id
 }
 
@@ -33,7 +32,9 @@ module "onecx-parameter-svc" {
 module "onecx-parameter-bff" {
   source = "../../modules/quarkus"
   repository_name        = "onecx-parameter-bff"
-  repository_description = "OneCx Parameter Management BFF"
+  repository_description = "OneCX Parameter Backend-For-Frontend"
+  homepage_url           = "https://onecx.github.io/docs/onecx-parameter/current/onecx-parameter-bff"
+  topics                 = ["java", "quarkus", "bff", "parameter"]
   team_id                = module.onecx-parameter-team.team_id
 }
 
@@ -41,7 +42,9 @@ module "onecx-parameter-bff" {
 module "onecx-parameter-ui" {
   source = "../../modules/angular"
   repository_name        = "onecx-parameter-ui"
-  repository_description = "OneCx Parameter Management UI"
+  repository_description = "OneCX Parameter UI"
+  homepage_url           = "https://onecx.github.io/docs/onecx-parameter/current/onecx-parameter-ui"
+  topics                 = ["angular", "ui", "parameter"]
   team_id                = module.onecx-parameter-team.team_id
 }
 
@@ -49,6 +52,8 @@ module "onecx-parameter-ui" {
 module "onecx-parameter-operator" {
   source = "../../modules/quarkus"
   repository_name        = "onecx-parameter-operator"
-  repository_description = "OneCx parameter k8s operator"
+  repository_description = "OneCX Parameter K8s Operator"
+  homepage_url           = "https://onecx.github.io/docs/onecx-parameter/current/onecx-parameter-operator"
+  topics                 = ["java", "quarkus", "operator", "parameter"]
   team_id                = module.onecx-parameter-team.team_id
 }

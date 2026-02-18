@@ -11,7 +11,9 @@ module "onecx-develop" {
 module "onecx-develop-product" {
   source = "../../modules/product"
   repository_name        = "onecx-develop"
-  repository_description = "OneCx develop Management"
+  repository_description = "OneCX Develop"
+  homepage_url           = "https://onecx.github.io/docs/onecx-develop/current/general"
+  topics                 = ["product", "develop"]
   team_id                = module.onecx-develop.team_id
   team_name              = module.onecx-develop.team_name
 }
@@ -20,7 +22,7 @@ module "onecx-develop-product" {
 module "onecx-develop-adminer" {
   source = "../../modules/base"
   repository_name        = "onecx-develop-adminer"
-  repository_description = "OneCx develop adminer"
+  repository_description = "OneCX Develop Adminer"
   team_id                = module.onecx-develop.team_id
   team_name              = module.onecx-develop.team_name
 }

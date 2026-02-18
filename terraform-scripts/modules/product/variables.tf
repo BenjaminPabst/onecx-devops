@@ -39,7 +39,8 @@ variable "patterns" {
   type = list(string)
   default = [
     "main",
-    "fix/*.*.x"
+    "fix/*.*.x",
+    "[0-9]*.x"
   ]
 }
 
@@ -62,5 +63,38 @@ variable "labels" {
     fix = "e9520e"
     feature = "0ee952"
     config = "c00ee9"
+    helm = "0052cc"
   }
+}
+
+variable "pr_check" {
+  description = "product pull request check context"
+  type = list(string)
+  default = [
+    "pr / helm / helm build and push"
+  ]
+}
+
+variable "archived" {
+  description = "Specifies if the repository should be archived. Defaults to false."
+  type = bool
+  default = false
+}
+
+variable "auto_merge" {
+  description = "Set to true to allow auto-merging pull requests on the repository."
+  type = bool
+  default = true
+}
+
+variable "homepage_url" {
+  description = "URL of a page describing the project"
+  type        = string
+  default     = null
+}
+
+variable "topics" {
+  description = "List of topics of the repository"
+  type        = list(string)
+  default     = []
 }

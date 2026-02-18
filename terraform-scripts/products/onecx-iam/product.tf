@@ -3,7 +3,7 @@
 module "onecx-iam-team" {
   source = "../../modules/github/team"
   team_name        = "onecx-iam"
-  team_description = "OneCx iam services team"
+  team_description = "OneCX iam services team"
   team_members_file_path   = "products/onecx-iam/team.csv"
 }
 
@@ -11,7 +11,9 @@ module "onecx-iam-team" {
 module "onecx-iam" {
   source = "../../modules/product"
   repository_name        = "onecx-iam"
-  repository_description = "OneCX Identity Access Management Product"
+  repository_description = "OneCX Identity Access Management"
+  homepage_url           = "https://onecx.github.io/docs/onecx-iam/current/general"
+  topics                 = ["product", "iam"]
   team_id                = module.onecx-iam-team.team_id
   team_name              = module.onecx-iam-team.team_name
 }
@@ -20,7 +22,9 @@ module "onecx-iam" {
 module "onecx-iam-kc-svc" {
   source = "../../modules/quarkus"
   repository_name        = "onecx-iam-kc-svc"
-  repository_description = "OneCX Identity Access Management Keycloak Service"
+  repository_description = "OneCX Identity Access Management Keycloak Backend Service"
+  homepage_url           = "https://onecx.github.io/docs/onecx-iam/current/onecx-iam-kc-svc"
+  topics                 = ["java", "quarkus", "svc", "iam"]
   team_id                = module.onecx-iam-team.team_id
 }
 
@@ -28,7 +32,9 @@ module "onecx-iam-kc-svc" {
 module "onecx-iam-kc-client-operator" {
   source = "../../modules/quarkus"
   repository_name        = "onecx-iam-kc-client-operator"
-  repository_description = "OneCx iam keycloak client operator"
+  repository_description = "OneCX Identity Access Management Keycloak Client Operator"
+  homepage_url           = "https://onecx.github.io/docs/onecx-iam/current/onecx-iam-kc-client-operator"
+  topics                 = ["java", "quarkus", "operator", "iam"]
   team_id                = module.onecx-iam-team.team_id
 }
 
@@ -36,7 +42,9 @@ module "onecx-iam-kc-client-operator" {
 module "onecx-iam-bff" {
   source = "../../modules/quarkus"
   repository_name        = "onecx-iam-bff"
-  repository_description = "OneCX Identity Access Management BFF"
+  repository_description = "OneCX Identity Access Management Backend-For-Frontend"
+  homepage_url           = "https://onecx.github.io/docs/onecx-iam/current/onecx-iam-bff"
+  topics                 = ["java", "quarkus", "bff", "iam"]
   team_id                = module.onecx-iam-team.team_id
 }
 
@@ -45,5 +53,17 @@ module "onecx-iam-ui" {
   source = "../../modules/angular"
   repository_name        = "onecx-iam-ui"
   repository_description = "OneCX Identity Access Management UI"
+  homepage_url           = "https://onecx.github.io/docs/onecx-iam/current/onecx-iam-ui"
+  topics                 = ["angular", "ui", "iam"]
+  team_id                = module.onecx-iam-team.team_id
+}
+
+# ONECX-IAM-SVC
+module "onecx-iam-svc" {
+  source = "../../modules/quarkus"
+  repository_name        = "onecx-iam-svc"
+  repository_description = "OneCX Identity Access Management Backend Service"
+  homepage_url           = "https://onecx.github.io/docs/onecx-iam/current/onecx-iam-svc"
+  topics                 = ["java", "quarkus", "svc", "iam"]
   team_id                = module.onecx-iam-team.team_id
 }

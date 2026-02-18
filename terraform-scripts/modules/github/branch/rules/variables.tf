@@ -21,6 +21,7 @@ variable "patterns" {
   type = list(string)
   default = [
     "main",
-    "fix/*.*.x"
+    "fix/*.*.x",
+    "[0-9]*.x"
   ]
 }

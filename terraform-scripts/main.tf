@@ -89,3 +89,31 @@ module "onecx-local" {
 module "onecx-test" {
   source = "./products/onecx-test"
 }
+
+module "onecx-admin" {
+  source = "./products/onecx-admin"
+}
+
+module "onecx-hello-world" {
+  source = "./products/onecx-hello-world"
+}
+
+module "onecx-ai-provider" {
+  source = "./products/onecx-ai-provider"
+}
+
+module "onecx-chat" {
+  source = "./products/onecx-chat"
+}
+
+module "onecx-service" {
+  source = "./products/onecx-service"
+}
+
+module "onecx-notification" {
+  source = "./products/onecx-notification"
+}
+
+module "onecx-ai-agents" {
+  source = "./products/onecx-ai-agents"
+}
